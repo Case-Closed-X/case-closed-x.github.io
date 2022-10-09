@@ -11,3 +11,10 @@ to
  项目中使用的图像如有侵权，请联系我删除。
 
 🌟我的邮箱：CaseClosedX@outlook.com。
+
+🌟效果图
+
+![image](https://case-closed-x.github.io/Images/index.png)
+![image](https://case-closed-x.github.io/Images/animatePage.png)
+![image](https://case-closed-x.github.io/Images/gamePage.png)
+
