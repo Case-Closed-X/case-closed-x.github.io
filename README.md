@@ -14,7 +14,7 @@ to
 
 🌟效果图
 
-![image](https://github.com/Case-Closed-X/case-closed-x.github.io/blob/fa42811f1b93f561497cb69ed1e375eb0be2f158/Images/index.png)
-![image](https://github.com/Case-Closed-X/case-closed-x.github.io/blob/c879ff97dc48cc8f3b92f57eb8f3e0708951944e/Images/animatePage.png)
-![image](https://github.com/Case-Closed-X/case-closed-x.github.io/blob/c879ff97dc48cc8f3b92f57eb8f3e0708951944e/Images/gamePage.png)
+![image](https://case-closed-x.github.io/Images/index.png)
+![image](https://case-closed-x.github.io/Images/animatePage.png)
+![image](https://case-closed-x.github.io/Images/gamePage.png)
 
