@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    body {
+        background-image: url("Images/background.jpg");
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+    }
+
+    .bgtable {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(0px);
+        margin: 70px auto;
+        border-radius: 50px;
+        transition-duration: 0.6s;
+    }
+
+    .bgtable:hover {
+        backdrop-filter: blur(12px);
+    }
+
+    tr {
+        text-align: center;
+    }
+
+    .td-left {
+        color: orangered;
+        padding:6px;
+    }
+
+    .button {
+        border: none;
+        padding: 16px 100px;
+        text-decoration: none;
+        display: inline-block;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        border-radius: 50px;
+        font-size: 20px;
+    }
+
+    .button1 {
+        background-color: transparent;
+        color: orangered;
+    }
+
+    .button1:hover {
+        background-color: orangered;
+        color: white;
+    }
+
+    .t {
+        font-size: 20px;
+        color: orangered;
+        transition-duration: 0.4s;
+    }
+
+    .t:hover {
+        font-size: 25px;
+        color: purple;
+    }
+
+    .avatar {
+        width: 80px;
+        height: 80px;
+        border-radius: 50px;
+        transition-duration: 0.4s;
+    }
+
+    .avatar:hover {
+        transform: scale(1.2);
+    }
+
+    .img {
+        border-radius: 40px;
+        transition-duration: 0.4s;
+    }
+
+    .img:hover {
+        border-radius: 60px;
+        transform: scale(0.9);
+    }
+</style>
+
+<head>
+    <title>我喜欢的动漫</title>
+</head>
+
+<body>
+    <table width="50%" cellspacing="0" cellpadding="0" class="bgtable">
+        <tr>
+            <td width="500px" height="350px"><img src="Images/S.png" width="350px" height="300px" alt="名侦探柯南"
+                    class="img"></td>
+            <td rowspan="2">
+                <table width="100%" cellpadding="0" cellspacing="25">
+                    <tr>
+                        <td colspan="2" class="td-left">
+                            <p><a href="index.html" class="t" style="text-decoration:none;" title="返回首页">返回首页</a></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-left">
+                            开源项目
+                        </td>
+                        <td class="td-right">
+                            <a href="https://github.com/Case-Closed-X" style="text-decoration:none;" title="https://github.com/Case-Closed-X" target="_blank">我的Github页面</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-left">
+                            联系作者
+                        </td>
+                        <td class="td-right">
+                            <a href="mailto:CaseClosedX@outlook.com" style="text-decoration:none;" title="CaseClosedX@outlook.com" target="_blank">我的Outlook邮箱</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-left">
+                            个人网站
+                        </td>
+                        <td class="td-right">
+                            <a href="https://case-closed-x.github.io/" style="text-decoration:none;" title="https://case-closed-x.github.io" target="_blank">我的个人网站</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-left">
+                            我的视频
+                        </td>
+                        <td class="td-right">
+                            <a href="https://space.bilibili.com/404056562" style="text-decoration:none;" title="https://space.bilibili.com/404056562" target="_blank">我的B站主页</a>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td colspan="2" class="td-left">
+                            <a href="GamePage.html">
+                                <button class="button button1">Next</button></a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table width="400px" cellspacing="0" cellpadding="0" style="padding-bottom:30px">
+                    <tr>
+                        <td width="130px" align="right">
+                            <img src="Images/Avatar.png" alt="Avatar" class="avatar">
+                        </td>
+                        <td width="150px" align="left" style="padding-left:20px">
+                            <p class="t">喜欢的动漫</p>
+                            <p>名侦探柯南</p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+</body>
+
+</html>

@@ -1,36 +1,169 @@
 <!DOCTYPE html>
 <html>
 
-<style>
-    .text {
-        position: relative;
-        text-align: center;
-        z-index: -1;
-    }
-
-    .Kear-Morhen {
-        text-align: center;
-        width: 960px;
-        height: 540px;
-        margin: auto;
-    }
-</style>
-
 <head>
-    <title>Case Closed</title>
-    <audio src="Audios/Kear Morhen.mp3" autoplay="autoplay" loop="loop">Kear Morhen</audio>
+  <title>Case Closed X随手写的个人网页</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: url(./images/Seaport.jpg);
+      background-size: cover;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+    }
+
+    img {
+      width: 120px;
+      height: 80px;
+      cursor: pointer;
+      border-radius: 20px;
+      margin-top: 5%;
+      margin-left: 10px;
+      margin-right: 10px;
+      transition-duration: 0.4s;
+    }
+
+    img:hover {
+      transform: scale(1.07);
+    }
+
+    #content {
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(0px);
+      margin: auto;
+      margin-top: 20px;
+      border-radius: 50px;
+      text-align: center;
+      height: 380px;
+      width: 520px;
+      transition-duration: 0.6s;
+    }
+
+    #content:hover{
+      backdrop-filter: blur(12px);
+    }
+
+    #bgImages {
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(0px);
+      margin: auto;
+      margin-top: 20px;
+      border-radius: 40px;
+      text-align: center;
+      height: 130px;
+      width: 470px;
+      display: block;
+      margin-bottom: 20px;
+      transition-duration: 0.4s;
+    }
+
+    #bgImages:hover{
+      backdrop-filter: blur(10px);
+    }
+
+    .mypicture {
+      width: 210px;
+      height: 190px;
+      cursor: pointer;
+      border-radius: 30px;
+      margin-top: 7%;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    button {
+      border-style: solid;
+      border-color: orangered;
+      padding: 16px 100px;
+      text-decoration: none;
+      display: inline-block;
+      margin: 4px 2px;
+      transition-duration: 0.4s;
+      cursor: pointer;
+      border-radius: 50px;
+      font-size: 20px;
+    }
+
+    #buttonSetBG {
+      background-color: transparent;
+      color: orangered;
+    }
+
+    #buttonSetBG:hover {
+      background-color: orangered;
+      color: white;
+    }
+  </style>
+  <script>
+    function changeBG() {//更改背景图片以及动态显示日期时间
+      setInterval("time.innerText=new Date().toLocaleString() + ' 星期' + '日一二三四五六'.charAt(new Date().getDay()); ", 1000);
+      //通过定时器动态显示日期时间
+
+      var imgs = document.getElementsByClassName("bg");//得到背景图片类
+      for (var i = 0; i < imgs.length; i++) {//遍历背景图片类
+        imgs[i].onclick = function () {//哪个图片被点击
+          document.body.style.background = "url(" + this.src + ") no-repeat";//就设置哪张图片为背景
+          document.body.style.backgroundSize = "cover";//覆盖整个背景
+          document.body.style.backgroundAttachment = "fixed";//不留空白
+        }
+      }
+    }
+
+    function mydescribe(display, flag) {//更改提示信息
+      var des = document.getElementById("describe");//通过ID找到提示信息
+      if (display == true) {//如果传入true，说明鼠标移入跳转图片，则通过flag判断显示对应跳转图片的提示信息
+        des.innerText = "提示信息：点击跳转到我喜欢的" + (flag == 1 ? "动漫页面" : "游戏页面");
+      }
+      else {//若传入false，说明鼠标移出跳转图片
+        des.innerText = "提示信息：这是我随手写的简单静态网页";
+      }
+    }
+
+    function jump(flag) {//通过flag判断跳转到哪个页面，flag为1跳转到AnimePage.html
+      window.location = (flag == 1 ? "AnimePage.html" : "GamePage.html");
+    }
+
+    var showImg = true;//设置当前是否正在显示的标志，缺省为显示
+    function show() {//显示更改背景图片菜单
+      var bgImages = document.getElementById("bgImages");//得到div
+      var button = document.getElementById("buttonSetBG");//得到button
+      if (showImg == false) {//如果当前没在显示更改背景图片菜单
+        bgImages.style.display = "block";//则显示更改背景图片菜单
+        showImg = true;//变更标志为正在显示
+        button.innerText = "点击隐藏设置背景图片菜单";//更改按钮的文字
+      }
+      else {//如果当前正在显示更改背景图片菜单
+        bgImages.style.display = "none";//则隐藏更改背景图片菜单
+        showImg = false;//变更标志为隐藏
+        button.innerText = "点击显示设置背景图片菜单";//更改按钮的文字
+      }
+    }
+  </script>
 </head>
 
-<body>
-    <div class="Kear-Morhen">
-        <h3>Kear Morhen</h3>
-        <!-- <video src="Videos/Kear Morhen.mp4" autoplay="autoplay" loop="loop" width="960" height="540" muted>Kear Morhen</video> -->
-        <img src="Images/Kear Morhen.jpg" alt="Kear Morhen" width="960" height="540" />
-    </div>
+<body onload="changeBG()">
+  <br />
+  <div id="time" style="color: white;text-align: center;">&nbsp;</div>
 
-    <div class="text">
-        <p contenteditable="true">This page is just for a test, at least for now.</p>
-    </div>
+  <div id="content">
+    <img class="mypicture" src="./Images/S.png" onclick="jump(1)" onmouseover="mydescribe(true,1)"
+      onmouseout="mydescribe(false,1)">
+    <img class="mypicture" src="./Images/FH5-store.jpg" onclick="jump(2)" onmouseover="mydescribe(true,2)"
+      onmouseout="mydescribe(false,2)">
+    <br /><br />
+    <p id="describe">提示信息：这是我随手写的简单静态网页</p>
+    <br />
+    <button id="buttonSetBG" onclick="show()">点击隐藏设置背景图片菜单</button>
+  </div>
+  <div id="bgImages">
+    <img class="bg" src="./Images/Seaport.jpg" >
+    <img class="bg" src="./Images/Windmill.jpg" >
+    <img class="bg" src="./Images/Building.jpg" >
+  </div>
 </body>
 
 </html>
